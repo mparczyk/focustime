@@ -5,7 +5,7 @@ import { fontSizes, spacing } from '../utils/sizes';
 
 export const FocusHistory = ({history}) => {
 
-  if(!history || !history.length) return <Text style={styles.title}>We haven't focudes on anything yet.</Text>
+  if(!history || !history.length) return <Text style={styles.firstTitle}>We haven't focudes on anything yet.</Text>
 
   const renderItem = ({item}) => <Text style={styles.item}>- {item}</Text>;
 
@@ -30,6 +30,12 @@ const styles = StyleSheet.create ({
     color: colors.white,
     paddingTop: spacing.sm,
 
+  },
+  firstTitle: {
+    color: colors.white,
+    fontSize: fontSizes.md,
+    fontWeight: 'bold',
+    padding: spacing.md,
   },
   title: {
     color: colors.white,
